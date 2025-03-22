@@ -14,8 +14,12 @@
    ```sh
    python manage.py runserver
    ```
-5. Test gRPC request:
+5. Run the grpc server:
    ```sh
-   python manage.py grpc_request
+   python -m users.grpcserver
+   ```
+6. Test gRPC request:
+   ```sh
+   python manage.py sample_grpc_request
    ```
 """

@@ -1,0 +1,47 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>User List</title>-->
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; text-align: center; }-->
+<!--        .container { margin-top: 50px; }-->
+<!--        table { width: 80%; margin: auto; border-collapse: collapse; }-->
+<!--        th, td { padding: 10px; border: 1px solid black; }-->
+<!--        .btn { padding: 5px 10px; text-decoration: none; background: green; color: white; border-radius: 5px; }-->
+<!--        .delete-btn { background: red; }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h1>User List</h1>-->
+<!--        <a href="{% url 'home' %}" class="btn">Home</a>-->
+<!--        <a href="{% url 'user-create' %}" class="btn">Create User</a>-->
+
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>Username</th>-->
+<!--                <th>Email</th>-->
+<!--                <th>Actions</th>-->
+<!--            </tr>-->
+<!--            {% for user in users %}-->
+<!--            <tr>-->
+<!--                <td>{{ user.id }}</td>-->
+<!--                <td>{{ user.username }}</td>-->
+<!--                <td>{{ user.email }}</td>-->
+<!--                <td>-->
+<!--                    <a href="{% url 'user-detail' user.id %}" class="btn">View</a>-->
+<!--                    <a href="{% url 'user-update' user.id %}" class="btn">Edit</a>-->
+<!--                    <form action="{% url 'user-delete' user.id %}" method="POST" style="display:inline;">-->
+<!--                        {% csrf_token %}-->
+<!--                        <button type="submit" class="btn delete-btn">Delete</button>-->
+<!--                    </form>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+<!--        </table>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->

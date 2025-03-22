@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { margin-top: 50px; }
+        .btn { padding: 10px 15px; margin: 10px; text-decoration: none; background: blue; color: white; border-radius: 5px; display: inline-block; }
+        .btn:hover { background: darkblue; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to User Management</h1>
+        <a href="/users/" class="btn">Access API</a>
+    </div>
+</body>
+<label for="date_joined">Date Joined:</label>
+<input type="date" id="date_joined" name="date_joined" placeholder="DD/MM/YYYY" required>
+<small style="color: gray;">Format should be DD/MM/YYYY</small>
+
+<script>
+    document.getElementById("date_joined").addEventListener("input", function (e) {
+        let value = e.target.value;
+        let parts = value.split("-");
+        if (parts.length === 3) {
+            e.target.value = `${parts[2]}/${parts[1]}/${parts[0]}`; // Convert YYYY-MM-DD to DD/MM/YYYY
+        }
+    });
+</script>
+</html>
